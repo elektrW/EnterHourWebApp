@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:employee="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Hours employee</title>
+</head>
+<body>
+<div class="container my-2">
+    <h1>Employee Hours</h1>
+    <table border="1" class = "table table-striped table-responsive-md">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Hours</th>
+            <th> Actions </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="hours: ${employee_hours}">
+            <td th:text="${hours.nameOfPlace}"></td>
+            <td th:text="${hours.homeOffice}"></td>
+            <td th:text="${hours.workedHours}"></td>
+            <td>
+                <a th:href="@{/showHoursForEmployee/{id}(id=${hours.id})}"
+                   class="btn btn-primary">Update</a>
+                <a th:href="@{/showHoursForEmployee/{id}(id=${hours.id})}"
+                   class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

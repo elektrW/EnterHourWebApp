@@ -1,6 +1,5 @@
 package pl.wojciechdomagala.enterhourwebapp.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -33,7 +32,7 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+            this.firstName = firstName;
     }
 
     public String getLastName() {
