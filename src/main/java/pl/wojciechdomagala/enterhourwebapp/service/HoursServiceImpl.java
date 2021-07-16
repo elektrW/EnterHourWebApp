@@ -39,6 +39,6 @@ public class HoursServiceImpl implements HoursService {
 
     @Override
     public void deleteEmployeeHoursById(long id) {
-        this.hoursRepository.getById(id);
+        this.hoursRepository.deleteById(id);
     }
 }
