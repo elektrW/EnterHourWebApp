@@ -8,7 +8,7 @@ public class Hours {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employee_id")
+    @Column(name = "id")
     private long id;
 
     @Column(name = "Name_of_place")

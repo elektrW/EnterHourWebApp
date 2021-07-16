@@ -27,9 +27,9 @@
             <td th:text="${hours.isHomeOffice}"></td>
             <td th:text="${hours.hours}"></td>
                 <td>
-                    <a th:href="@{/showHoursForEmployee/{id}(id=${hours.id})}"
+                    <a th:href="@{/showHoursFormForEmployee/{id}(id=${hours.id})}"
                        class="btn btn-primary">Update</a>
-                    <a th:href="@{/showHoursForEmployee/{id}(id=${hours.id})}"
+                    <a th:href="@{/deleteHours/{id}(id=${hours.id})}"
                        class="btn btn-danger">Delete</a>
                 </td>
         </tr>

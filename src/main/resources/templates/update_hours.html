@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:employee="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee hours update</title>
+</head>
+<body>
+    <div class="container">
+      <h1>Hours Management System</h1>
+      <hr>
+      <h2>Update Hours</h2>
+      <form action="#" th:action="@{/saveHours}" th:object="${hours}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{nameOfPlace}" placeholder="Name of place" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{isHomeOffice}" placeholder="Home office" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{hours}" placeholder="Worked hours" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-success col-2">Update Hours</button>
+      </form>
+      <form action="#" th:action="@{/showHoursForEmployee}">
+        <button type="submit" class="btn btn-secondary col-2">Back to hours list</button>
+      </form>
+    </div>
+</body>
+</html>
