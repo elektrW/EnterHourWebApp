@@ -8,6 +8,7 @@ public class Hours {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "employee_id")
     private long id;
 
     @Column(name = "Name_of_place")
@@ -18,6 +19,11 @@ public class Hours {
 
     @Column(name = "Hours")
     private int hours;
+
+//    @OneToOne
+//    @MapsId
+//    @JoinColumn(name = "employee_id")
+//    private Employee employee;
 
     public long getId() {
         return id;

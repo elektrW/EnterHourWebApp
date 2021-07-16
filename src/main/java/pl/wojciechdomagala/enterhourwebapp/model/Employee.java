@@ -8,6 +8,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
     @Column(name = "first_name")
@@ -18,6 +19,18 @@ public class Employee {
 
     @Column(name = "email")
     private String email;
+
+//    @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL)
+//    @PrimaryKeyJoinColumn
+//    private Hours hours;
+
+//    public Hours getHours() {
+//        return hours;
+//    }
+//
+//    public void setHours(Hours hours) {
+//        this.hours = hours;
+//    }
 
     public long getId() {
         return id;

@@ -14,12 +14,12 @@
         <h2>Save Hours</h2>
         <form action="#" th:action="@{/saveHours}" th:object="${hours}" method="POST">
             <input type="text" th:field="*{nameOfPlace}" placeholder="Name of place" class="form-control mb-4 col-4">
-            <input type="text" th:field="*{homeOffice}" placeholder="Home office?" class="form-control mb-4 col-4">
-            <input type="text" th:field="*{workedHours}" placeholder="Worked hours" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{isHomeOffice}" placeholder="Home office" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{hours}" placeholder="Worked hours" class="form-control mb-4 col-4">
             <button type="submit" class="btn btn-success col-2">Save Hours</button>
         </form>
-        <form action="#" th:action="@{/}">
-          <button type="submit" class="btn btn-secondary col-2">Back to home</button>
+        <form action="#" th:action="@{/showHoursForEmployee}">
+          <button type="submit" class="btn btn-secondary col-2">Back to hours list</button>
         </form>
     </div>
 </body>

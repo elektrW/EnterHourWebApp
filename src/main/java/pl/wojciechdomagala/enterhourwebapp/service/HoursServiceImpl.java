@@ -20,6 +20,6 @@ public class HoursServiceImpl implements HoursService {
 
     @Override
     public void saveHours(Hours hours) {
-
+        this.hoursRepository.save(hours);
     }
 }
