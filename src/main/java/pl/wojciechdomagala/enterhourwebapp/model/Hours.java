@@ -18,7 +18,7 @@ public class Hours {
     private String isHomeOffice;
 
     @Column(name = "Hours")
-    private int hours;
+    private Integer hours;
 
 //    @OneToOne
 //    @MapsId
@@ -49,11 +49,11 @@ public class Hours {
         this.isHomeOffice = isHomeOffice;
     }
 
-    public int getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(int hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 }
