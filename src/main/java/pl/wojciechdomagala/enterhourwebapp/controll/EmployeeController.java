@@ -13,8 +13,13 @@ import pl.wojciechdomagala.enterhourwebapp.service.EmployeeService;
 @Controller
 public class EmployeeController {
 
-    @Autowired
+
     private EmployeeService employeeService;
+    
+    @Autowired
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     //display list of employees
     @GetMapping("/")

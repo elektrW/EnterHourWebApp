@@ -15,8 +15,13 @@ import pl.wojciechdomagala.enterhourwebapp.service.HoursService;
 @Controller
 public class HoursController {
 
-    @Autowired
+
     private HoursService hoursService;
+
+    @Autowired
+    public HoursController(HoursService hoursService) {
+        this.hoursService = hoursService;
+    }
 
     //display employee hours
     @GetMapping("/showHoursForEmployee")

@@ -1,6 +1,10 @@
 package pl.wojciechdomagala.enterhourwebapp.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "employees")
@@ -20,17 +24,9 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-//    @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL)
-//    @PrimaryKeyJoinColumn
-//    private Hours hours;
-
-//    public Hours getHours() {
-//        return hours;
-//    }
-//
-//    public void setHours(Hours hours) {
-//        this.hours = hours;
-//    }
+//    @OneToMany
+//    @JoinColumn(name = "employee_id", referencedColumnName = "id_employee")
+//    private List<Hours> hours = new ArrayList<>();
 
     public long getId() {
         return id;
