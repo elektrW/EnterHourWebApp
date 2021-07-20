@@ -13,7 +13,6 @@ import pl.wojciechdomagala.enterhourwebapp.service.EmployeeService;
 @Controller
 public class EmployeeController {
 
-
     private EmployeeService employeeService;
 
     @Autowired

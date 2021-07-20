@@ -1,6 +1,8 @@
 package pl.wojciechdomagala.enterhourwebapp.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "employees")
@@ -8,7 +10,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_employee")
     private Long id;
 
     @Column(name = "first_name")
@@ -19,6 +21,11 @@ public class Employee {
 
     @Column(name = "email")
     private String email;
+
+    @OneToMany
+    @JoinColumn(name = "employee_id", referencedColumnName = "id_employee")
+    private List<Hours> hours = new ArrayList<>();
+
 
     public Long getId() {
         return id;
