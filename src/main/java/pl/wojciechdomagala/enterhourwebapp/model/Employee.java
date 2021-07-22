@@ -26,7 +26,6 @@ public class Employee {
     @JoinColumn(name = "employee_id", referencedColumnName = "id_employee")
     private List<Hours> hours = new ArrayList<>();
 
-
     public Long getId() {
         return id;
     }

@@ -2,6 +2,7 @@ package pl.wojciechdomagala.enterhourwebapp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.wojciechdomagala.enterhourwebapp.model.Employee;
 import pl.wojciechdomagala.enterhourwebapp.model.Hours;
 import pl.wojciechdomagala.enterhourwebapp.repository.HoursRepository;
 
@@ -11,8 +12,12 @@ import java.util.Optional;
 @Service
 public class HoursServiceImpl implements HoursService {
 
-    @Autowired
     private HoursRepository hoursRepository;
+
+    @Autowired
+    public HoursServiceImpl(HoursRepository hoursRepository) {
+        this.hoursRepository = hoursRepository;
+    }
 
     @Override
     public List<Hours> getAllHours() {

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface HoursService {
     List<Hours> getAllHours();
-    void saveHours (Hours hours);
+    void saveHours(Hours hours);
     Hours getEmployeeHoursById(long id);
     void deleteEmployeeHoursById(long id);
 }
