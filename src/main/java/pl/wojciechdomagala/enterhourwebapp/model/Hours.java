@@ -20,6 +20,9 @@ public class Hours {
     @Column(name = "Hours")
     private Integer hours;
 
+    @ManyToOne
+    private Employee employee;
+
     public Long getId() {
         return id;
     }

@@ -22,8 +22,7 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    @OneToMany
-    @JoinColumn(name = "employee_id", referencedColumnName = "id_employee")
+    @OneToMany(mappedBy = "employee")
     private List<Hours> hours = new ArrayList<>();
 
     public Long getId() {

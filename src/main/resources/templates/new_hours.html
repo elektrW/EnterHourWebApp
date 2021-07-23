@@ -18,7 +18,7 @@
             <input type="text" th:field="*{hours}" placeholder="Worked hours" class="form-control mb-4 col-4">
             <button type="submit" class="btn btn-success col-2">Save Hours</button>
         </form>
-        <form action="#" th:action="@{/showHoursForEmployee}">
+        <form action="#" th:action="@{/showHoursForEmployee/{id}(id=${employee.id}}">
           <button type="submit" class="btn btn-secondary col-2">Back to hours list</button>
         </form>
     </div>

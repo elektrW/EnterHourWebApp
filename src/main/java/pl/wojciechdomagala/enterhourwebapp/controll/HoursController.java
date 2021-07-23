@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import pl.wojciechdomagala.enterhourwebapp.model.Employee;
 import pl.wojciechdomagala.enterhourwebapp.model.Hours;
 import pl.wojciechdomagala.enterhourwebapp.service.HoursService;
 
@@ -18,21 +19,22 @@ public class HoursController {
     }
 
     //display employee hours
-    @GetMapping("/showHoursForEmployee")
-    public String showHoursForEmployee(Model model) {
+    @GetMapping("/showHoursForEmployee/{id}")
+    public String showHoursForEmployee(Model model, @PathVariable String id) {
+
         model.addAttribute("employee_hours", hoursService.getAllHours());
         return "hours_employee";
     }
 
-    @GetMapping("/showNewEmployeeHoursForm")
-    public String showNewEmployeeHoursForm(Model model) {
+    @GetMapping("/showNewEmployeeHoursForm/{id}")
+    public String showNewEmployeeHoursForm(Model model, @PathVariable String id) {
         Hours hours = new Hours();
         model.addAttribute("hours", hours);
         return "new_hours";
     }
 
-    @PostMapping("/saveHours")
-    public String saveEmployee(@ModelAttribute("hours") Hours hours) {
+    @PostMapping("/saveHours/{id}")
+    public String saveEmployee(@ModelAttribute("hours") Hours hours, @PathVariable String id) {
         //save hours to database
         hoursService.saveHours(hours);
         return "redirect:/showHoursForEmployee";
