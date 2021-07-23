@@ -28,7 +28,7 @@ WHAT ELSE I NEED TO DO?
   
   *Update* - if there is anything to change you can also update informations for any employee;
   
-  *Delete* - for any reason you can delete employee that you add;
+  *Delete* - for any reason you can delete employee that you add; 
   
   *Back to home* - a button just for back to the home page;
   
