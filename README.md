@@ -4,8 +4,8 @@ This is a CRUD app for employee and his worked hours in job.
 #THIS IS NOT THE LAST VERSION OF APP.
 WHAT ELSE I NEED TO DO?
 - SECURITY
-- TYPE OF MAIN KEY SHOULD BE LONG - done (why Long? - because the default value of int is '0' (so user can't know that is it true value from db) then Long can be null or anything else)
-- EACH EMPLOYEE NEED DB FOR ADDING HOURS - @OneToMany 
+- TYPE OF MAIN KEY SHOULD BE LONG - done (why Long? - because the default value of int is '0' (so user don't know that is it true value from db) then Long can be null or anything else)
+- EACH EMPLOYEE NEED DB FOR ADDING HOURS - @OneToMany?
 - SOLVE THE PROBLEM OF AUTO '0' IN 'HOURS' FIELD - the problem is already solved by changed a type of hours from int to Integer
 - MORE INFORMATIONS = MORE COLUMNS (LIKE YO, WHAT KIND OF CONTRACT DOES EMPLOYEE HAVE)
 - A LITTLE BIT MORE PRETTY DESIGN (BUT IT'S NOT IMPORTANT FOR THIS MOMENT)
